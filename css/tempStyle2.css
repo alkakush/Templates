@@ -1,24 +1,35 @@
+.container{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
 body{
 	background-color:#fbfcfe;
 	display:block;
-	margin:0;
-}
+     margin:0;
+ }    
+
 /*
-#main-header{
-	position: fixed;
-	top: 0;
-	width:100%;
-}
-*/
 .container{
 	margin:0;
 	overflow:hidden;
 	background-color: #1d5efa;
+    position:fixed;
+	top:0;
+}
+*/
 
+.main-header{
+	background-color: #1d5efa;
+    overflow:hidden;
+    position:fixed;
+	top:0; 
+	width:100%;
 }
 
+
 .navbar {
-	display:inline-block;
 	background-color: #1d5efa;
 	color:#f5feff;
 
@@ -26,24 +37,21 @@ body{
 
 .navbar ul{
 	list-style-type: none;
-	margin:auto;
-	text-align:right;
-	padding: 20px;
-	
-
+	margin:0 5px;
+	padding: 10px 0;
+   
 }
 
 .navbar li{
-	color:#f5feff;
-	font-family:arial; 
-    float:right;
+	/*color:#f5feff;
+	font-family:arial; */
+      float:right;
 }
-.navbar a /* .dropbtn  */ {
+.navbar li a{
 	text-decoration: none;
 	font-family:arial;
 	color:#d7e9fd;
-	padding: 10px 35px;
-	margin:5px 15px;
+	padding: 10px 20px 10px 20px;
 	display:inline-block;
 	font-weight: bold;
 	border-radius: 8px;
@@ -57,8 +65,9 @@ body{
 
 .section1{
 	background-color: #1d5efa;
-	height: 530px;
-	background-image: url("../image/web3.png");
+	height:auto;
+	width:100%;
+	background-image: url("../image/web4.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	margin:auto;
@@ -66,7 +75,6 @@ body{
 
 .div-1 {
    margin:0 60px;
-   padding:8% 55% 10% 5%;
    line-height: 1.7em;
    display:inline-block;
  }
@@ -83,7 +91,7 @@ body{
    color:#c4d5ef;
    font-family: arial;
    font-weight: bold;
-   font-size: 20px;
+   font-size: 15px;
 
 }
 
@@ -383,10 +391,13 @@ body{
 .div-footer p{
 	text-align: left;
     font-size:20px;
+	display:inline-block;
 }
 .div-footer ul{
 	text-align: right;
 	list-style-type: none;
+	display: inline;
+	float: right;
 	
 }
 
@@ -401,3 +412,407 @@ body{
 .div-footer a:hover{
 	color: gray;
 	border-radius: 6px;
+}
+
+
+/*   ============================ this code will work on only mobile devices ============================ */
+
+
+@media(max-width:767px){ 
+
+	.section1{
+   background-size: contain;
+
+	}
+	.main-header{
+		max-height: 45px;
+		display: contents;
+	}
+	.navbar ul{
+		padding: 0;
+		display: grid;
+	}
+   
+    .navbar li{
+		padding: 5px;
+		text-align: center;
+		max-height: 30px;
+	}
+	.navbar li a{
+		padding: 4px 15px;
+		margin:0;
+	}
+
+	.div-1{
+		margin:54px 20px 45px 35px;
+	}
+
+	.div-1 p{
+		max-width:420px;
+	}
+
+	.div-2 li{
+		padding:0;
+	}
+	#section3 h2{
+		font-size: 30px;
+	}
+	.div-3{
+		display:flex;
+		flex-direction: column;
+		margin:0;
+	}
+	.div-3 div{
+		padding:0;
+	}
+
+	.div-4{
+		display:flex;;
+		flex-wrap:wrap;
+		flex-direction:column;
+	}
+	.div-5{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content:center;
+	}
+
+	#section6 h2{
+		margin:0;
+	}
+
+	.div-6{
+		margin:0;
+		flex-wrap: wrap;
+	}
+	.div-7{
+		display:flex;
+		margin:0 5px;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	#section7 p{
+		margin:0;
+	}
+
+	
+	.div-footer p{
+		font-size: 19px;
+	} 
+
+	.div-footer ul{
+		text-align: center;
+		float:right;
+		font-size: 10px;
+	}
+}   
+
+
+/*   ============================ this code will work on only tablet devices ============================ */
+@media(min-width:768px){
+    .section1{
+		background-size: contain;
+    }
+
+	.main-header{
+		max-height: 45px;
+		display: contents;
+	}
+
+    .navbar li{
+		padding: 10px 4px;
+		text-align: center;
+		max-height: 40px;
+	}
+
+	.navbar li a{
+		padding: 5px 13px;
+		margin:0;
+	}
+    .navbar ul{
+		padding:0;
+		margin:0;
+	}
+
+    .div-1 {
+		margin: 40px 10px 15px 30px;
+    }
+
+	.div-1 h1{
+		font-size: 35px;
+	}
+	
+    .div-1 p{
+	    max-width: 400px;
+		font-size: 20px;
+    }
+
+
+	.div-2 li{
+		padding:0;
+	}
+	#section3 h2{
+		font-size: 45px;
+	}
+	.div-3{
+		display:flex;
+		flex-direction: row;
+		margin:0 10px;
+	}
+	.div-3 div{
+		padding:0;
+	}
+
+	.div-4{
+		display:flex;;
+		flex-wrap:wrap;
+		flex-direction:row;
+	}
+	.div-5{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction:row;
+		align-content:center;
+	}
+
+	#section6 h2{
+		margin:0;
+	}
+
+	.div-6{
+		margin:0 10px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.div-7{
+		display:flex;
+		margin:0 5px;
+		flex-direction:row;
+		flex-wrap: wrap;
+	}
+
+	#section7 p{
+		margin:0;
+	}
+	
+	.div-footer p{
+		font-size: 19px;
+	} 
+
+	.div-footer ul{
+		text-align: center;
+		float:none;
+		font-size: 10px;
+	}
+}
+
+
+
+/*   ============================ this code will work on only desktop devices ============================ */
+@media(min-width:992px){
+
+	.section1{
+		background-size: contain;
+    }
+
+	.main-header{
+		max-height: 400px;
+	}
+
+    .div-1 h1{
+		font-size: 55px;
+	}
+
+    
+	.div-1 {
+		margin:60px 5px 30px 20px;
+    }
+    
+
+	.div-1 p{
+	    max-width: 500px;
+		font-size: 20px;
+    }
+
+
+	.div-2 li{
+		padding:10px 20px;
+	}
+	#section3 h2{
+		font-size: 45px;
+	}
+	.div-3{
+		display:flex;
+		flex-direction: row;
+		margin:0 10x;
+	}
+	.div-3 div{
+		padding:0;
+		margin:10px;
+	}
+     
+
+    #section4 h2{
+		font-size: 50px;
+	}
+
+	.div-4{
+		display:flex;;
+		flex-wrap:wrap;
+		flex-direction:row;
+	}
+	.div-5{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction:row;
+		align-content:center;
+	}
+
+	.div-5 div{
+		margin:14px 40px;
+	}
+
+	#section6 h2{
+		margin:0;
+		font-size:45px ;
+	}
+
+	.div-6{
+		margin:0 70px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.div-7{
+		display:flex;
+		margin:0 5px;
+		flex-direction:row;
+		flex-wrap: wrap;
+	}
+
+	#section7 {
+		padding:20px 0;
+	}
+
+	#section7 p{
+		margin:0;
+	}
+	
+	.div-footer p{
+		font-size: 22px;
+	} 
+
+	.div-footer ul{
+		text-align: center;
+		float:none;
+		font-size: 10px;
+	}
+	
+}
+
+
+/*   ============================ this code will work on only larg  devices ============================ */
+@media(min-width:1200px){
+
+
+	.navbar ul{
+		display: inline;
+		padding:30px 0;
+	}
+    .navbar li{
+		margin:0 5px;
+		padding: 10px 30px;
+		font-size: 18px;
+	}
+    .div-1 h1{
+		font-size: 40px;
+	}
+
+    
+	.div-1 {
+		margin:150px 5px 80px 90px ;
+    }
+    
+
+	.div-1 p{
+	    
+		font-size: 15px;
+    }
+
+
+	.div-2 li{
+		padding:15px 42px;
+	}
+	#section3 h2{
+		font-size: 50px;
+	}
+	.div-3{
+		display:flex;
+		margin:0 20x;
+	}
+	.div-3 div{
+		padding:0;
+		margin:20px 50px;
+	}
+     
+
+    #section4 h2{
+		font-size: 50px;
+	}
+
+	.div-4{
+		display:flex;;
+		flex-wrap:wrap;
+		
+	}
+	.div-5{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction:row;
+		align-content:center;
+		margin: 0;
+	}
+
+	.div-5 div{
+		margin:14px 5px;
+	}
+
+	#section6 h2{
+		margin:0;
+		font-size:45px ;
+	}
+
+	.div-6{
+		margin:0;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.div-7{
+		display:flex;
+		margin:0 5px;
+		flex-direction:row;
+		flex-wrap: wrap;
+	}
+
+	#section7 {
+		margin:20px 30px;
+	}
+
+	#section7 p{
+		margin:10px 30px;
+	}
+	
+	.div-footer p{
+		font-size: 25px;
+	} 
+
+	.div-footer ul{
+		text-align: center;
+		float:right;
+		font-size: 25px;
+	}
+}
